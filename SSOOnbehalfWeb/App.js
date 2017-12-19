@@ -5,9 +5,9 @@ var app = (function () {  // jshint ignore:line
     'use strict';
 
     var self = {};
-    self.tenant = "yourtenantname"; // tenant name of the user logging in, e.g. contoso.com
-    self.clientId = "yourAADAppId"; // AAD ApplicationId of the Outlook Addin
-    self.redirectUri = "yourAADReplyUrl"; // AAD ReplyUrl of the Outlook Addin
+
+    self.clientId = "Your App Id"
+    self.redirectUri = "https://localhost:44326/authentication/auth.html";
 
     return self;
 

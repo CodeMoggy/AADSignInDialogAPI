@@ -6,20 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace ThirdPartyAPI.Controllers
 {
     [Authorize]
-    [EnableCors(origins: "*", headers: "*", methods: "*")] // not production-ready...consider using actual values
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ReverseController : ApiController
     {
-        /// <summary>
-        /// Reverses the letters of each word in a string 
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
         // GET api/values
         public string Get(string data)
         {

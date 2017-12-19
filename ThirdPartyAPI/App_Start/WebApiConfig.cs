@@ -15,7 +15,6 @@ namespace ThirdPartyAPI
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            // need enable CORS if API to be called from a javascript client
             config.EnableCors();
 
 

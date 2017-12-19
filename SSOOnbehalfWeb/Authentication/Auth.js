@@ -15,12 +15,12 @@
 
         window.config = {
             instance: "https://login.microsoftonline.com/",
-            tenant: app.tenant,
+            tenant: 'common', // for multi-tenancy this needs to be 'common'
             clientId: app.clientId,
-            redirectUri: app.redirectUri,
-            cacheLocation: 'localStorage', // enable to cache user
+            redirectUri: 'https://localhost:44326/authentication/auth.html',
+            //cacheLocation: 'localStorage', // enable to cache user
             endpoints: {
-                "YourApiAADAppIdName": "YourApiAADAppIdUri" // AAD App ID Name / Uri of Web API
+                "Your Web API App Id Name": "Your Web API App Id Uri"
             }
         }
 
@@ -39,7 +39,7 @@
         }
         else {
             // Get access token for graph
-            authContext.acquireToken("YourApiAADAppIdUri", function (error, token) {
+            authContext.acquireToken("Your Web API App Id Uri", function (error, token) {
                 // Check for success
                 if (error || !token) {
                     // Handle ADAL Error
